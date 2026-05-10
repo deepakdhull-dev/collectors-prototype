@@ -1,4 +1,4 @@
-from collectors.ram import RamCollector
+from collectors.disk import DiskCollector
 
-cls = RamCollector()
+cls = DiskCollector()
 print(cls.collect_safe())
