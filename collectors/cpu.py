@@ -15,11 +15,11 @@ class CPUCollector(BaseCollector):
         if self.prev_stats == None:
             self.prev_stats = curr
             return 0.0
-        prev = prev_stats
+        prev = self.prev_stats
         prev_idle = prev[3] + prev[4]
         curr_idle = curr[3] + curr[4]
         tot_prev = sum(prev)
-        tot_curr = sum(prev)
+        tot_curr = sum(curr)
         idle_delta = curr_idle - prev_idle
         tot_delta = tot_curr - tot_prev
         if tot_delta == 0:
